@@ -1,0 +1,68 @@
+<!-- contact-form-area start -->
+<div id="contact" class="contact-form-area pt-100 pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-5">
+                <div class="area-title mb-40">
+                    <h2 class="mb-15">Contáctanos</h2>
+                </div>
+                <div class="contact-form mb-50 wow fadeInLeft" data-wow-delay=".3s">
+                    <form class="contactform" ngNativeValidate #f="ngForm" (ngSubmit)="sendEmail( f )">
+                        <label for="">Nombre:</label>
+                        <input name="nombre" [(ngModel)]="nombre" type="text" placeholder="" required>
+
+                        <label for="">Correo electrónico: <i>(opcional)</i></label>
+                        <input name="correo" [(ngModel)]="correo" type="email" placeholder="">
+
+                        <label for="">Número de contacto:</label>
+                        <input name="telefono" [(ngModel)]="telefono" type="text" placeholder="" required>
+
+                        <label for="">Mensaje:</label>
+                        <textarea name="cuerpo" [(ngModel)]="cuerpo" cols="30" rows="10" placeholder=""
+                            required></textarea>
+
+                        <button class="btn red-gradient" type="submit">Enviar</button>
+                    </form>
+                    <p class="ajax-response"></p>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-6 offset-lg-1 offset-xl-1">
+                <div class="area-title mb-40">
+                    <h2 class="mb-15">Información de contacto</h2>
+                </div>
+                <div class="contact-info red-contact mb-50 wow fadeInRight" data-wow-delay=".3s">
+                    <ul>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Dirección</h5>
+                                <span>Manuel Domínguez N°336 c/ Inmaculada Concepción <br> Fernando De la mora</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Llamanos al</h5>
+                                <span>+595 981854457</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="far fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Correo electrónico</h5>
+                                <span>ogamipy@gmail.com</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contact-form-area end -->
